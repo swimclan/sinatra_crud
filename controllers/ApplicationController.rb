@@ -6,10 +6,10 @@ class ApplicationController < Sinatra::Base
   :adapter => 'postgresql',
   :database => 'vader'
   )
-end
 
-set :views, File.expand_path('../../views', __FILE__)
+  set :views, File.expand_path('../../views', __FILE__)
 
-not_found do
-  erb :not_found
+  not_found do
+    erb :not_found
+  end
 end
